@@ -1,0 +1,13 @@
+name: pytorch2-py3_9
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pytorch=2.0
+  - torchvision
+  - jupyterlab
+  - numpy
+  - matplotlib
+  - tqdm
+  - datasets

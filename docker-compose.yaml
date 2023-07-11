@@ -1,0 +1,20 @@
+version: "3"
+services:
+  pytorch-container:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    runtime: nvidia
+    devices:
+      - /dev/nvidia0:/dev/nvidia0
+      - /dev/nvidia-uvm:/dev/nvidia-uvm
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    volumes:
+      - .:/simple-deep-learning-study
+    ports:
+      - 8888:8888
+    tty: true
+    stdin_open: true
+    command: jupyter lab --ip=0.0.0.0 --no-browser --allow-root
