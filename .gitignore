@@ -2,3 +2,6 @@
 .ipynb_checkpoints/
 data/
 sample/
+src/cifar_generated/
+src/model.h5
+src/wandb/
